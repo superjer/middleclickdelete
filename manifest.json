@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Middle Click Delete",
+    "author": "Jer",
+    "description": "Middle click to delete HTML elements, with Undo!",
+    "version": "0.9999999",
+    "icons": { 
+        "16": "icon16.png",
+        "128": "icon128.png" },
+        "permissions": [
+            "contextMenus"
+        ],
+        "content_scripts": [
+            {
+                "matches": ["<all_urls>"],
+                "js": ["mcd.js"]
+            }
+        ],
+        "background": {
+            "persistent": true,
+            "scripts": ["mcdbg.js"]
+        }
+}
